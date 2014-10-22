@@ -57,5 +57,14 @@ def wall_add(msg):
 
     result = wall_list()
     result["result"] = "Message Received"
-
     return result
+
+def clear_wall():
+
+    session['wall'] = DEFAULT_MESSAGES
+
+    result = wall_list()
+    result["result"] = "Messages Cleared"
+    return result
+
+
